@@ -40,9 +40,9 @@ services:
       redis:
         condition: service_healthy
     environment:
-      DATABASE_URL: postgresql+asyncpg://postgres:clawd_claude_dev_2026@db:5432/clawdxcraft
+      DATABASE_URL: postgresql+asyncpg://postgres:PASSWORD@db:5432/clawdxcraft
       REDIS_URL: redis://redis:6379/0
-      SECRET_KEY: clawdxcraft-dev-secret-change-in-prod
+      SECRET_KEY: change-in-prod
       PYTHONPATH: /app/src/backend:/app
       ENFORCEMENT_MODE: ${ENFORCEMENT_MODE:-observe}
       LLM_PROVIDER: ${LLM_PROVIDER:-mock}
@@ -73,7 +73,7 @@ services:
       redis:
         condition: service_healthy
     environment:
-      DATABASE_URL: postgresql+asyncpg://postgres:clawd_claude_dev_2026@db:5432/clawdxcraft
+      DATABASE_URL: postgresql+asyncpg://postgres:PASSWORD@db:5432/clawdxcraft
       REDIS_URL: redis://redis:6379/0
       SECRET_KEY: clawdxcraft-dev-secret-change-in-prod
       PYTHONPATH: /app/src/backend:/app
@@ -99,7 +99,7 @@ services:
       backend:
         condition: service_healthy
     environment:
-      DATABASE_URL: postgresql+asyncpg://postgres:clawd_claude_dev_2026@db:5432/clawdxcraft
+      DATABASE_URL: postgresql+asyncpg://postgres:PASSWORD@db:5432/clawdxcraft
       REDIS_URL: redis://redis:6379/0
       SECRET_KEY: clawdxcraft-dev-secret-change-in-prod
       PYTHONPATH: /app/src/backend:/app
