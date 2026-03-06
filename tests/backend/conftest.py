@@ -5,7 +5,7 @@ from typing import AsyncGenerator
 
 # 1. SETUP ENVIRONMENT FIRST (Before any app/database imports)
 TEST_DB_NAME = "test_clawdxcraft"
-BASE_URL = os.environ.get("DATABASE_URL", "postgresql+asyncpg://clawd_claude:clawd_claude_dev_2026@localhost:5432/clawdxcraft")
+BASE_URL = os.environ.get("DATABASE_URL", "postgresql+asyncpg://clawd_claude:dev_password@localhost:5432/clawdxcraft")
 TEST_DATABASE_URL = BASE_URL.replace("/clawdxcraft", f"/{TEST_DB_NAME}")
 MAINTENANCE_URL = BASE_URL.replace("/clawdxcraft", "/postgres")
 

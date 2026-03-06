@@ -3,7 +3,7 @@ import os
 import asyncpg
 
 # Hardcoded to match your working psql command
-DSN = "postgresql://clawd_claude:clawd_claude_dev_2026@127.0.0.1:5433/clawdxcraft"
+DSN = "postgresql://clawd_claude:dev_password@127.0.0.1:5433/clawdxcraft"
 
 async def main():
     print(f"🔌 Attempting connection to: 127.0.0.1:5433 as clawd_claude")
